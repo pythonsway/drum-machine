@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Russo+One");
+
+body {
+  user-select: none;
+  background: linear-gradient(35deg, RoyalBlue, DodgerBlue);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  }
+
+#root {
+  flex: 1;
+}
+
+.container {
+  display: flex;  
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: Russo One;
+  padding-top: 50px;
+  outline: 1px solid navy;
+  box-shadow: 1px 1px 10px 2px #3a4b5f;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  flex: 1 100%;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#display {
+  flex: 1 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: 1px solid navy;
+  margin: 15px auto;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.pad-bank {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+  justify-content: center;
+  padding: 5px 10px 20px;
+}
+
+.drum-pad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.activePad {
+  background-color: orange;
+  margin-top: 13px;
+  box-shadow: 0 3px orange;
+  height: 77;
+}
+
+.inactivePad {
+  background-color: lightgrey;
+  margin-top: 10px;
+  box-shadow: 3px 3px 5px black;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.power, .volume {
+  flex: 1;
+  width: 200px;
+}
+
+.power p, .volume p {
+  margin-bottom: 0;
+}
+
+.power .select {
+  margin: auto;
+  border: 1px solid black;
+  width: 50px;
+  height: 20px;
+  padding: 1px;
+  background-color: black;
+  opacity: 0.8;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.inner {
+  width: 23px;
+  height: 19px;
+  background: orange;
+  border: 1px solid black;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.power .select:hover {
+  opacity: 1;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 19px;
+  background: black;
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 19px;
+  height: 19px;
+  background: orange;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 19px;
+  height: 19px;
+  background: orange;
+  cursor: pointer;
+}
+
+.footer {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8em;
+  color: #fff;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: #243c68;
+}
